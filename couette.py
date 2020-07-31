@@ -90,7 +90,8 @@ start_time = time()
 
 # Linear Element
 if polynomial_option == 1:
- mesh_name = 'malha_couette.msh'
+ #mesh_name = 'malha_couette.msh'
+ mesh_name = 'mesh4.msh'
  equation_number = 3
 
  directory = search_file.Find(mesh_name)
@@ -164,6 +165,7 @@ dt = float(CFL*length_min)
 #dt = 0.005
 Re = 100.0
 Sc = 1.0
+nt = int(14.0/dt)
 
 end_time = time()
 import_mesh_time = end_time - start_time
